@@ -85,7 +85,7 @@ def show_prediction():
         
         try:
             prediction = rf_model.predict(input_data)
-            proba = rf_model.predict_proba(input_data)[0][0] * 100
+            roba = rf_model.predict_proba(input_data)[0][prediction[0]] * 100
             
             st.subheader("Hasil Prediksi")
             if prediction[0] == 0:
